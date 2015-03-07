@@ -1,0 +1,21 @@
+data = open("input.txt", "r")
+clear_data = open("output.txt", "w")
+l = data.readlines()
+list = [[]]
+list.clear()
+for token in l:
+    list.append(token.split("\t"))
+# del list[0]
+for i in range(0, len(list), 1):
+    if list[i][3] == "NA":
+        list[i].clear()
+    else:
+        del list[i][0]
+        del list[i][0]
+        del list[i][0]
+for gene in list:
+    if len(gene) != 0:
+        clear_data.write("\t".join(gene) + "\n")
+clear_data.close()
+data.close()
+
