@@ -34,3 +34,6 @@ for gene in list:
         clear_data.write("\t".join(gene) + "\n")
 clear_data.close()
 data.close()
+#for elem in a:
+#    if len(d[elem]) != 0:
+#        clear_data.write(elem + "\t" + "\t".join(d[elem]) + "\n")
