@@ -29,11 +29,8 @@ for i in range(1, len(list), 1):
             for j in range(1, min(len(list[i]), len(buf)), 1):
                 form.append(str(float(list[i][j]) + float(buf[j])))
             d[list[i][0]] = form
-for gene in list:
-    if len(gene) != 0:
-        clear_data.write("\t".join(gene) + "\n")
+for elem in a:
+    if len(d[elem]) != 0:
+        clear_data.write(elem + "\t" + "\t".join(d[elem]) + "\n")
 clear_data.close()
 data.close()
-#for elem in a:
-#    if len(d[elem]) != 0:
-#        clear_data.write(elem + "\t" + "\t".join(d[elem]) + "\n")
